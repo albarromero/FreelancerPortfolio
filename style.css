@@ -1,0 +1,159 @@
+:root {
+    --primaryFont: "Gothic A1", sans-serif;
+    --secondaryFont: "Oswald", sans-serif;
+    --primaryColor: #F1A94E;
+    --secondaryColor: #44B3C2;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: var(--primaryFont);
+}
+
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+p {
+    padding: 1rem;
+}
+
+.hero {
+    background-image: url(img/fondo.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .container {
+    display: grid;
+    align-content: center;
+    height: 100vh;
+}
+
+.hero .content {
+    text-align: center;
+    color: var(--white);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.services {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.services h2 {
+    padding-bottom: 1rem;
+}
+
+.services h2::after {
+    content: "";
+    display: block;
+    height: .4rem;
+    width: 8rem;
+    background-color: var(--primaryColor);
+    margin: .5rem auto 0 auto;
+}
+
+.services i {
+    font-size: 2.5rem;
+    color: var(--secondaryColor);
+    padding: 2rem;
+}
+
+.element {
+    border-bottom: 3px solid var(--primaryColor);
+    margin-bottom: 3rem;
+}
+
+.element h3,
+.element p {
+    text-align: center;
+}
+
+.element img {
+    border-radius: 20px;
+}
+
+.element:last-of-type {
+    border: none;
+}
+
+.portfolio h2 {
+    padding-bottom: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.portfolio h2::after {
+    content: "";
+    display: block;
+    height: .3rem;
+    width: 8rem;
+    background-color: var(--primaryColor);
+    margin: .7rem auto 0 auto
+}
+
+.footer {
+    background-image: url(img/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+@media (min-width:768px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1.7rem;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+        grid-auto-rows: max-content;
+    }
+
+    .element:nth-child(3) {
+        grid-row-end: span 2;
+    }
+
+    .element {
+        border: none;
+    }
+
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 30%) auto;
+    }
+}
