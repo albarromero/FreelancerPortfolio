@@ -1,3 +1,19 @@
+window.onscroll = function() {
+    let scroll = window.pageYOffset;
+    const arrow = document.getElementById("arrow")
+    
+    if(arrow.style.opacity="0") {
+        if(scroll >= 600 && scroll<=1800) {
+            arrow.style.opacity="1";
+        }
+    } else {
+        if(scroll <= 200 || scroll >=1800) {
+            arrow.style.opacity="0";
+        }
+    }
+
+}
+
 document.addEventListener("DOMContentLoaded", ()=>{
     loadPortfolio();
 })
