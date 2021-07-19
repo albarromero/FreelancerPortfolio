@@ -1,2 +1,2 @@
 # FreelancerPortfolio
-Initial project. It is a portfolio for a freelancer.
+A portfolio for a freelancer.
